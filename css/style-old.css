@@ -1,0 +1,196 @@
+body {
+    background: #1ED3BD;
+    margin: 3vh 0px;
+    color: #ffffff;
+    font-family: 'Mitr', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+#main {
+    background: #FEEAF3;
+    margin: 1vh 0px;
+    color: rgb(240, 140, 218);
+}
+
+#wrapper {
+    margin: 0px auto;
+    padding: 0.5vh 0px;
+    max-width: 720px;
+}
+
+#status,
+#footer {
+    background: #ffffff;
+    border-radius: 8px;
+    font-size: 175%;
+    line-height: 1;
+    padding: 10px 0px;
+}
+
+.stage {
+    margin-top: 30px;
+    min-height: 70vh;
+}
+
+#members {
+    width: 70%;
+    margin: 0px auto;
+}
+
+#members-list {
+    padding-top: 10px;
+    border-bottom: 5px solid #ffffff;
+    width: 100%;
+    margin: 0px auto;
+    overflow-x: hidden;
+}
+
+#members-list .member {
+    height: 320px;
+    width: auto;
+    min-width: 300px;
+}
+
+#member-info-placeholder {
+    min-height: 60px;
+}
+
+#lanes-map .header div .span {
+    font-size: 150%;
+}
+
+.lane {
+    border-top: 2px solid #ffffff;
+}
+
+.lane:last-child {
+    border-bottom: 2px solid #ffffff;
+}
+
+.lane>div {
+    padding-top: 0.5em;
+}
+
+.lane-number {
+    padding-bottom: 0.5em;
+    font-size: 150%;
+}
+
+.lane .member {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.member {
+    cursor: pointer;
+}
+
+.navigation {
+    margin-top: 20px;
+    font-size: 125%;
+}
+
+.navigator {
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 5px 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.middle span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bottom span {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+#info-modal {
+    color: #333333;
+}
+
+#info-modal-image {
+    width: 100%;
+}
+
+.modal-body {
+    font-size: 150%;
+}
+
+.go-to-summarize,
+.go-to-members,
+.remove {
+    cursor: pointer;
+}
+
+.plan-card {
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    font-size: 100%;
+    padding-top: 10px;
+    margin: 5px auto;
+    width: 95%;
+}
+
+#summary-list-1 .plan-card {
+    background-color: #ffffff;
+}
+
+#summary-list-2 .plan-card {
+    background-color: rgb(255, 244, 249);
+}
+
+#summary-list-3 .plan-card {
+    background-color: rgb(254, 234, 243);
+}
+
+#summary-list-4 .plan-card {
+    background-color: rgb(255, 222, 238);
+}
+
+#summary-list-5 .plan-card {
+    background-color: rgb(255, 211, 231);
+}
+
+.plan-card .member {
+    width: 100%;
+}
+
+.plan-card-empty {
+    font-size: 150%;
+    text-align: center;
+}
+
+.smaller {
+    font-size: 75%;
+}
+
+.larger {
+    font-size: 150%;
+}
+
+#footer {
+    font-size: 125%;
+    margin-top: 10px;
+}
+
+a,
+a:hover,
+a:visited {
+    color: rgb(240, 178, 218);
+}
+
+.row {
+    margin: 0px;
+}

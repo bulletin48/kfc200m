@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Koisuru 200M Cookie — 𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:title" content="𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓" />
+    <meta property="og:url" content="https://bulletin48.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/mfqJyKm20Z4/maxresdefault.jpg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:site_name" content="𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓" />
+    <meta property="og:description" content="AKB48 Admirer, BNK48 Observer, CGM48 Spectator" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="https://i.ytimg.com/vi/mfqJyKm20Z4/maxresdefault.jpg" />
+        </header>
+
+        <article>
+            <h1>ตอนนี้คุกกี้เสี่ยงทายไปแล้ว</h1>
+            <div class="counter" id="counter">กี่ครั้ง</div>
+            <div class="updated" id="updated">ข้อมูลล่าสุด</div>
+        </article>
+
+        <footer>
+            <div>
+                <strong>© 𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓</strong>
+            </div>
+            Follow us on
+            <a href="https://facebook.com/bulletin48" target="_blank">Facebook</a> •
+            <a href="https://twitter.com/bulletin48" target="_blank">Twitter</a> •
+            <a href="https://instagram.com/bulletin48" target="_blank">Instagram</a>
+        </footer>
+    </div>
+</body>
+
+<script>
+    async function fetchJSON(req) {
+        try {
+            const res           = await fetch(req)
+            const contentType   = res.headers.get('content-type')
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new TypeError("Sorry, data isn't in JSON format.")
+            }
+            const data = await res.json()
+            return data
+        } catch (error) {
+            console.error('Error: ', error)
+        }
+    }
+
+    function processData(data) {
+        date    = new Date()
+        date.setTime(data.timestamp)
+        updated = date.toLocaleString('ja-JP', {timeZone:'Asia/Bangkok'})
+        updated = updated.replace(/\//g, '.')
+        counter = data.counter.toLocaleString('ja-JP')
+
+        document.getElementById('counter').innerHTML = `${counter} ครั้ง`
+        document.getElementById('updated').innerHTML = `ข้อมูลล่าสุด — ${updated}`
+    }
+
+    const file  = 'data/kfc.json'
+    const req   = new Request(file)
+    fetchJSON(req)
+    .then((data) => {
+        processData(data)
+    })
+</script>
+
+</html>

@@ -1,0 +1,8 @@
+.DS_Store
+.vscode
+.code-workspace
+.env
+
+apps/
+node_modules
+yarn.lock
