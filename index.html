@@ -19,8 +19,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=20231225175727" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=20231226" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -31,7 +30,8 @@
         </header>
 
         <article>
-            <h1>ตอนนี้คุกกี้เสี่ยงทายไปแล้ว</h1>
+            <div class="interval" id="interval">ตลอดเวลาที่ผ่านมา</div>
+            <h1>ชาวไทย<a href="https://youtu.be/mfqJyKm20Z4" target="KFC">คุกกี้เสี่ยงทาย</a>ไปแล้ว</h1>
             <div class="counter" id="counter">กี่ครั้ง</div>
             <div class="updated" id="updated">ข้อมูลล่าสุด</div>
         </article>
@@ -43,38 +43,16 @@
                 </strong>
             </div>
             Follow us on
+            <a href="https://youtube.com/bulletin48" target="_blank">YouTube</a> •
             <a href="https://facebook.com/bulletin48" target="_blank">Facebook</a> •
             <a href="https://twitter.com/bulletin48" target="_blank">Twitter</a> •
             <a href="https://instagram.com/bulletin48" target="_blank">Instagram</a>
         </footer>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+    <script src="js/kfc.js?v=20231226"></script>
     <script>
-        async function fetchJSON(req) {
-            try {
-                const res           = await fetch(req)
-                const contentType   = res.headers.get('content-type')
-                if (!contentType || !contentType.includes('application/json')) {
-                    throw new TypeError("Sorry, data isn't in JSON format.")
-                }
-                const data = await res.json()
-                return data
-            } catch (error) {
-                console.error('Error: ', error)
-            }
-        }
-
-        function processData(data) {
-            date    = new Date()
-            date.setTime(data.timestamp)
-            updated = date.toLocaleString('ja-JP', {timeZone:'Asia/Bangkok'})
-            updated = updated.replace(/\//g, '.')
-            counter = data.counter.toLocaleString('ja-JP')
-
-            document.getElementById('counter').innerHTML = `${counter} ครั้ง`
-            document.getElementById('updated').innerHTML = `ข้อมูลล่าสุด — ${updated}`
-        }
-
         const current = new Date()
         const file  = 'data/kfc.json?v=' + current.getTime()
         const req   = new Request(file)

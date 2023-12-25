@@ -38,7 +38,7 @@ body {
 .wrapper article .counter {
   font-size: var(--bulletin-font-largest);
 }
-.wrapper article .updated {
+.wrapper article .updated, .wrapper article .interval {
   font-size: var(--bulletin-font-medium);
 }
 .wrapper footer {
@@ -48,11 +48,12 @@ body {
 }
 
 a {
-  color: var(--bulletin-color-plain);
-  text-decoration: underline;
+  color: var(--bulletin-color-white);
+  text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+  color: var(--bulletin-color-plain);
+  text-decoration: underline;
 }
 
 h1 {

@@ -40,7 +40,7 @@ body {
     .counter {
       font-size: var(--bulletin-font-largest);
     }
-    .updated {
+    .updated, .interval {
       font-size: var(--bulletin-font-medium);
     }
   }
@@ -53,10 +53,11 @@ body {
 }
 
 a {
-  color: var(--bulletin-color-plain);
-  text-decoration: underline;
+  color: var(--bulletin-color-white);
+  text-decoration: none;
   &:hover {
-    text-decoration: none;
+    color: var(--bulletin-color-plain);
+    text-decoration: underline;
   }
 }
 
