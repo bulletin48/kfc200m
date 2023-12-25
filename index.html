@@ -73,12 +73,11 @@
         document.getElementById('updated').innerHTML = `ข้อมูลล่าสุด — ${updated}`
     }
 
-    const file  = 'data/kfc.json'
+    const current = new Date()
+    const file  = 'data/kfc.json?v=' + current.getTime()
     const req   = new Request(file)
     fetchJSON(req)
-    .then((data) => {
-        processData(data)
-    })
+    .then(data => processData(data))
 </script>
 
 </html>
