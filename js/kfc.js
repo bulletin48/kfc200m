@@ -28,7 +28,7 @@ function processData(data) {
   if (dMonths > 0)  interval += ` ${dMonths} เดือน `
   if (dDays  > 0)   interval += ` ${dDays} วัน `
 
-  document.getElementById('interval').innerHTML = `ตลอดเวลา ${interval}`
+  document.getElementById('interval').innerHTML = `ตลอด ${interval} ที่ผ่านมา`
   document.getElementById('counter').innerHTML  = `${counter} ครั้ง`
   document.getElementById('updated').innerHTML  = `ข้อมูลล่าสุด — ${updated}`
 }

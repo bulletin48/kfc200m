@@ -39,22 +39,21 @@
         <footer>
             <div>
                 <strong>
-                    &copy; <a href="https://bulletin48.github.io">𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓</a>
+                    &copy; <a href="https://bulletin48.github.io">𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓</a>, 2023.
                 </strong>
             </div>
-            Follow us on
+            Follow us :
             <a href="https://youtube.com/bulletin48" target="_blank">YouTube</a> •
             <a href="https://facebook.com/bulletin48" target="_blank">Facebook</a> •
-            <a href="https://twitter.com/bulletin48" target="_blank">Twitter</a> •
-            <a href="https://instagram.com/bulletin48" target="_blank">Instagram</a>
+            <a href="https://twitter.com/bulletin48" target="_blank">Twitter</a>
         </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
     <script src="js/kfc.js?v=20231226"></script>
     <script>
-        const current = new Date()
-        const file  = 'data/kfc.json?v=' + current.getTime()
+        const current = moment().format('YYYYMMDDHHmmSS')
+        const file  = 'data/kfc.json?v=' + current
         const req   = new Request(file)
         fetchJSON(req)
         .then(data => processData(data))
