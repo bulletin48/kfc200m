@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta property="og:title" content="𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓" />
-    <meta property="og:url" content="https://bulletin48.github.io" />
+    <meta property="og:url" content="https://bulletin48.github.io/kfc200m" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://i.ytimg.com/vi/mfqJyKm20Z4/maxresdefault.jpg" />
     <meta property="og:image:width" content="1280" />
@@ -20,7 +20,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=20231225175727" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -37,7 +38,9 @@
 
         <footer>
             <div>
-                <strong>© 𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓</strong>
+                <strong>
+                    &copy; <a href="https://bulletin48.github.io">𝕭𝖚𝖑𝖑𝖊𝖙𝖎𝖓</a>
+                </strong>
             </div>
             Follow us on
             <a href="https://facebook.com/bulletin48" target="_blank">Facebook</a> •
@@ -45,39 +48,39 @@
             <a href="https://instagram.com/bulletin48" target="_blank">Instagram</a>
         </footer>
     </div>
-</body>
 
-<script>
-    async function fetchJSON(req) {
-        try {
-            const res           = await fetch(req)
-            const contentType   = res.headers.get('content-type')
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new TypeError("Sorry, data isn't in JSON format.")
+    <script>
+        async function fetchJSON(req) {
+            try {
+                const res           = await fetch(req)
+                const contentType   = res.headers.get('content-type')
+                if (!contentType || !contentType.includes('application/json')) {
+                    throw new TypeError("Sorry, data isn't in JSON format.")
+                }
+                const data = await res.json()
+                return data
+            } catch (error) {
+                console.error('Error: ', error)
             }
-            const data = await res.json()
-            return data
-        } catch (error) {
-            console.error('Error: ', error)
         }
-    }
 
-    function processData(data) {
-        date    = new Date()
-        date.setTime(data.timestamp)
-        updated = date.toLocaleString('ja-JP', {timeZone:'Asia/Bangkok'})
-        updated = updated.replace(/\//g, '.')
-        counter = data.counter.toLocaleString('ja-JP')
+        function processData(data) {
+            date    = new Date()
+            date.setTime(data.timestamp)
+            updated = date.toLocaleString('ja-JP', {timeZone:'Asia/Bangkok'})
+            updated = updated.replace(/\//g, '.')
+            counter = data.counter.toLocaleString('ja-JP')
 
-        document.getElementById('counter').innerHTML = `${counter} ครั้ง`
-        document.getElementById('updated').innerHTML = `ข้อมูลล่าสุด — ${updated}`
-    }
+            document.getElementById('counter').innerHTML = `${counter} ครั้ง`
+            document.getElementById('updated').innerHTML = `ข้อมูลล่าสุด — ${updated}`
+        }
 
-    const current = new Date()
-    const file  = 'data/kfc.json?v=' + current.getTime()
-    const req   = new Request(file)
-    fetchJSON(req)
-    .then(data => processData(data))
-</script>
+        const current = new Date()
+        const file  = 'data/kfc.json?v=' + current.getTime()
+        const req   = new Request(file)
+        fetchJSON(req)
+        .then(data => processData(data))
+    </script>
+</body>
 
 </html>
