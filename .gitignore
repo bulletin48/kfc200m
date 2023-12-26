@@ -3,6 +3,7 @@
 .code-workspace
 .env
 *.sh
+*.log
 
 apps/
 node_modules
