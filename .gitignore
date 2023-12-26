@@ -5,6 +5,5 @@
 *.sh
 *.log
 
-apps/
 node_modules
 yarn.lock
