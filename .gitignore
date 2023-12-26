@@ -2,6 +2,7 @@
 .vscode
 .code-workspace
 .env
+*.sh
 
 apps/
 node_modules
