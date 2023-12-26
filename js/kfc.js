@@ -16,7 +16,7 @@ function processData(data) {
   const counter = data.counter.toLocaleString('th-TH')
 
   const date      = moment(data.timestamp)
-  const initDate  = moment('2017-11-18 13:00')
+  const initDate  = moment('2017-11-18 18:00')
   const during    = moment.duration(date.diff(initDate))
   const dYears    = during.years()
   const dMonths   = during.months()
