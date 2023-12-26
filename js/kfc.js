@@ -21,7 +21,7 @@ function processData(data) {
   const dYears    = during.years()
   const dMonths   = during.months()
   const dDays     = during.days()
-  const updated   = date.format('YYYY.MM.DD HH:mm:ss')
+  const updated   = date.format('YYYY.MM.DD hh:mm A')
 
   var interval  = ''
   if (dYears > 0)   interval += ` ${dYears} ปี `
