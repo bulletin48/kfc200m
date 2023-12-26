@@ -5,7 +5,5 @@
   "description": "Fetch View Count",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {
-    "progress": "^2.0.3"
-  }
+  "dependencies": {}
 }

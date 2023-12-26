@@ -1,5 +1,8 @@
 import { readdirSync, readFileSync, writeFile } from 'fs'
 
+// To combine history from separated json, single used.
+// Keeping only in purpose of development history.
+
 function getHistory(dir, list) {
   const files = readdirSync(dir)
   for (const file of files) {

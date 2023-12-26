@@ -4,6 +4,11 @@ Countdown BNK48's most notable song to 200 Million Views
 
 ---
 
+## Version 0.3
+
+- Store history to single csv file.
+- Put app runner to repository in purpose of development
+
 ## Version 0.2
 
 - View counts promising to update every 15 minutes.
