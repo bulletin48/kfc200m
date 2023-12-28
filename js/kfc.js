@@ -14,21 +14,26 @@ async function fetchJSON(req) {
 
 function processData(data) {
   const counter = data.counter.toLocaleString('th-TH')
+  const dataDate  = moment(data.timestamp)
 
-  const date      = moment(data.timestamp)
+  // interval
+  let interval  = ''
   const initDate  = moment('2017-11-18 18:00')
-  const during    = moment.duration(date.diff(initDate))
+  const during    = moment.duration(dataDate.diff(initDate))
   const dYears    = during.years()
   const dMonths   = during.months()
   const dDays     = during.days()
-  const updated   = date.format('YYYY.MM.DD hh:mm A')
-
-  var interval  = ''
   if (dYears > 0)   interval += ` ${dYears} ปี `
   if (dMonths > 0)  interval += ` ${dMonths} เดือน `
   if (dDays  > 0)   interval += ` ${dDays} วัน `
 
+  // updated
+  const date        = moment()
+  const updated     = dataDate.format('YYYY.MM.DD hh:mm A')
+  const relUpdated  = moment.duration(dataDate.diff(date)).locale('th').humanize(true)
+
   document.getElementById('interval').innerHTML = `ตลอด ${interval} ที่ผ่านมา`
   document.getElementById('counter').innerHTML  = `${counter} ครั้ง`
-  document.getElementById('updated').innerHTML  = `ข้อมูลล่าสุด — ${updated}`
+  document.getElementById('updated').innerHTML  = `ข้อมูลล่าสุด — ${relUpdated}`
+  document.getElementById('updated').setAttribute('title', updated)
 }

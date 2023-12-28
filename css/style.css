@@ -33,6 +33,7 @@ body {
   text-align: center;
 }
 .wrapper article div {
+  cursor: default;
   margin: 1.5rem auto;
 }
 .wrapper article .counter {

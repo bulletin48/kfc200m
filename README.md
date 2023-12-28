@@ -2,7 +2,14 @@
 
 Countdown BNK48's most notable song to 200 Million Views
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L4SO2Z5)
+
 ---
+
+## Version 0.4
+
+- Change last update text to relative, time string titled when hover.
+- Add [Support me on Ko-fi](https://ko-fi.com/bulletin48) button.
 
 ## Version 0.3
 
