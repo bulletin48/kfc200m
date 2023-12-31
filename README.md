@@ -6,6 +6,12 @@ Countdown BNK48's most notable song to 200 Million Views
 
 ---
 
+## Version 0.5
+
+- Interval toggle between relative and initial date.
+- Last Update toggle between relative and absolute time.
+- Counter toggle between counter and countdown to 200M.
+
 ## Version 0.4
 
 - Change last update text to relative, time string titled when hover.

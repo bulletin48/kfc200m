@@ -38,11 +38,19 @@ body {
       cursor: default;
       margin: 1.5rem auto;
     }
+    .narrator {
+      margin: 1rem 0;
+      line-height: 1.2;
+      font-family: var(--bulletin-font-face);
+      font-size: var(--bulletin-font-larger);
+    }
     .counter {
       font-size: var(--bulletin-font-largest);
+      cursor: pointer
     }
     .updated, .interval {
       font-size: var(--bulletin-font-medium);
+      cursor: pointer;
     }
   }
 
@@ -62,22 +70,25 @@ a {
   }
 }
 
-h1 {
-  margin: 1rem 0;
-  font-family: var(--bulletin-font-face);
-  font-size: var(--bulletin-font-larger);
-}
+// h1 {
+//   margin: 1rem 0;
+//   font-family: var(--bulletin-font-face);
+//   font-size: var(--bulletin-font-larger);
+// }
 
 @media screen and (max-width:600px) {
   .wrapper {
-    h1 {
-      font-size: var(--bulletin-font-large)
-    }
+    // h1 {
+    //   font-size: var(--bulletin-font-large)
+    // }
     article {
+      .narrator {
+        font-size: var(--bulletin-font-large)
+      }
       .counter {
         font-size: var(--bulletin-font-larger);
       }
-      .updated {
+      .updated, .interval {
         font-size: var(--bulletin-font-small);
       }
     }

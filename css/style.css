@@ -36,11 +36,19 @@ body {
   cursor: default;
   margin: 1.5rem auto;
 }
+.wrapper article .narrator {
+  margin: 1rem 0;
+  line-height: 1.2;
+  font-family: var(--bulletin-font-face);
+  font-size: var(--bulletin-font-larger);
+}
 .wrapper article .counter {
   font-size: var(--bulletin-font-largest);
+  cursor: pointer;
 }
 .wrapper article .updated, .wrapper article .interval {
   font-size: var(--bulletin-font-medium);
+  cursor: pointer;
 }
 .wrapper footer {
   margin-top: auto;
@@ -57,20 +65,14 @@ a:hover {
   text-decoration: underline;
 }
 
-h1 {
-  margin: 1rem 0;
-  font-family: var(--bulletin-font-face);
-  font-size: var(--bulletin-font-larger);
-}
-
 @media screen and (max-width: 600px) {
-  .wrapper h1 {
+  .wrapper article .narrator {
     font-size: var(--bulletin-font-large);
   }
   .wrapper article .counter {
     font-size: var(--bulletin-font-larger);
   }
-  .wrapper article .updated {
+  .wrapper article .updated, .wrapper article .interval {
     font-size: var(--bulletin-font-small);
   }
 }/*# sourceMappingURL=style.css.map */

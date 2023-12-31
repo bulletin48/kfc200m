@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr">
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=20231228" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=20240101" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
@@ -40,10 +40,10 @@
         </header>
 
         <article>
-            <div class="interval" id="interval">ตลอดเวลาที่ผ่านมา</div>
-            <h1>ชาวไทย<a href="https://youtu.be/mfqJyKm20Z4" target="KFC">คุกกี้เสี่ยงทาย</a>ไปแล้ว</h1>
+            <div class="interval" id="interval" title="click to toggle">ตลอดเวลาที่ผ่านมา</div>
+            <div class="narrator" id="narrator">ชาวไทย<a href="https://youtu.be/mfqJyKm20Z4" target="KFC">คุกกี้เสี่ยงทาย</a>ไปแล้ว</div>
             <div class="counter" id="counter">กี่ครั้ง</div>
-            <div class="updated" id="updated">ข้อมูลล่าสุด</div>
+            <div class="updated" id="updated" title="click to toggle">ข้อมูลล่าสุด</div>
         </article>
 
         <footer>
@@ -61,7 +61,7 @@
 
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
-    <script src="js/kfc.js?v=20231228"></script>
+    <script src="js/kfc.js?v=20240101"></script>
     <script>
         const current = moment().format('YYYYMMDDHHmmSS')
         const file  = 'data/kfc.json?v=' + current
