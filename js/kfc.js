@@ -114,7 +114,7 @@ function randomBg() {
   const imgKey  = Object.keys(imgList)
   const rand    = Math.floor(Math.random() * imgKey.length)
   const imgId   = imgKey[rand]
-  const bg      = `../image/${imgId}.jpg`
+  const bg      = `image/${imgId}.jpg`
   const pos     = imgList[imgId]
   document.body.style.backgroundImage    = `url(${bg})`
   document.body.style.backgroundPosition = pos
