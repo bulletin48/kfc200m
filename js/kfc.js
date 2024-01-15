@@ -48,6 +48,7 @@ function processData(data) {
   const countdown = aim - counter
 
   const narratorElement = document.querySelector('#narrator')
+  const subNarratorElement = document.querySelector('#subnarrator')
   const counterElement  = document.querySelector('#counter')
   const kfcLink         = '<a href="https://youtu.be/mfqJyKm20Z4" target="KFC">คุกกี้เสี่ยงทาย</a>'
   const narratorString  = `ชาวไทย${kfcLink}ไปแล้ว`
@@ -56,7 +57,7 @@ function processData(data) {
   let countdownNarratorString
   let countdownString
   if (countdown > 0) {
-    countdownNarratorString = `เพื่อให้ถึง 200 ล้านครั้ง<br />ชาวไทยต้อง${kfcLink}`
+    countdownNarratorString = `ชาวไทยต้อง${kfcLink}`
     countdownString = `อีก ${countdown.toLocaleString('th-TH')} ครั้ง`
   } else {
     countdownNarratorString = `ชาวไทย${kfcLink}ครบ`
@@ -67,7 +68,15 @@ function processData(data) {
   counterElement.innerHTML  = counterString
   counterElement.dataset.useDef = true
   counterElement.onclick = (e) => toggler(e, counterString, countdownString, (useDef) => {
-    narratorElement.innerHTML = useDef ? countdownNarratorString : narratorString
+    if (useDef) {
+      narratorElement.innerHTML = countdownNarratorString
+      subNarratorElement.style.display = 'block'
+      intervalElement.style.display = 'none'
+    } else {
+      narratorElement.innerHTML = narratorString
+      subNarratorElement.style.display = 'none'
+      intervalElement.style.display = 'block'
+    }
   })
 
   // updated
