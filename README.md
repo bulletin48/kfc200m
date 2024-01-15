@@ -1,10 +1,25 @@
 # KFC go to 200M
 
-Countdown BNK48's most notable song to 200 Million Views
+Countdown The BNK48's most notable song to 200 Million Views on YouTube
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L4SO2Z5)
 
 ---
+
+## Roadmap
+
+- ~~View counts to update more frequently in later version.~~
+- Randomized background as snapshot from MV.
+- Update automatically over resource from Firebase.
+- Build Page with React.
+- Use WebSocket to update automatically when number changes.
+- Track over multi-video.
+
+---
+
+## Version 0.6
+
+- Change style to display better in vertical candybar.
 
 ## Version 0.5
 
@@ -31,8 +46,3 @@ Countdown BNK48's most notable song to 200 Million Views
 
 - Initialized, hosted on GitHub Pages.
 - View counts would manually update over Git protocol every about 1 hour.
-
-## Roadmap
-
-- ~~View counts to update more frequently in later version.~~
-- Tracking multi-video.
