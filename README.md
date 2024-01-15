@@ -17,6 +17,10 @@ Countdown The BNK48's most notable song to 200 Million Views on YouTube
 
 ---
 
+## Version 0.7
+
+- Randomize image background to dissolve boring.
+
 ## Version 0.6
 
 - Change style to display better in vertical candybar.

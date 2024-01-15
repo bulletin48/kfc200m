@@ -37,14 +37,14 @@
 
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mitr">
-    <link rel="stylesheet" type="text/css" href="css/style.css?v=202401151942" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=20240116" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <img src="https://i.ytimg.com/vi/mfqJyKm20Z4/maxresdefault.jpg" />
+            <!-- <img src="https://i.ytimg.com/vi/mfqJyKm20Z4/maxresdefault.jpg" /> -->
         </header>
 
         <article>
@@ -76,8 +76,10 @@
 
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
-    <script src="js/kfc.js?v=20240115"></script>
+    <script src="js/kfc.js?v=20240116"></script>
     <script>
+        window.addEventListener("DOMContentLoaded", randomBg)
+
         const current = moment().format('YYYYMMDDHHmmSS')
         const file  = 'data/kfc.json?v=' + current
         const req   = new Request(file)
@@ -86,11 +88,11 @@
 
         // Tip Me
         kofiWidgetOverlay.draw('bulletin48', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Support',
-        'floating-chat.donateButton.background-color': '#d66fca',
-        'floating-chat.donateButton.text-color': '#f8e1f5'
-      })
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support',
+            'floating-chat.donateButton.background-color': '#d66fca',
+            'floating-chat.donateButton.text-color': '#f8e1f5'
+        })
     </script>
 </body>
 

@@ -16,9 +16,9 @@
 
 body {
   background-color: var(--bulletin-color-primary);
-  background-image: url(../image/mfqJyKm20Z4.jpg);
-  background-attachment: fixed;
+  background-image: url(../image/default.jpg);
   background-position: 66% center;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--bulletin-color-white);
@@ -71,6 +71,11 @@ article .counter {
 article .updated, article .interval {
   font-size: var(--bulletin-font-medium);
   cursor: pointer;
+}
+
+body.article-top article {
+  margin-top: 1.14rem;
+  margin-bottom: auto;
 }
 
 footer {

@@ -91,3 +91,38 @@ function processData(data) {
   updateElement.dataset.useDef  = true
   updateElement.onclick = (e) => toggler(e, relUpdateString, updateString)
 }
+
+function randomBg() {
+  const imgList = {
+    'default': '66% center',
+    '033': '5% center',
+    '060': '22% center',
+    '083': '55% center',
+    '140': '46% center',
+    '148': '45% center',
+    '152': '22% center',
+    '154': '60% center',
+    '169': '41% center',
+    '170': '42% center',
+    '237': '20% center',
+    '238': '60% center',
+    '272': '17% center',
+    '273': '45% center',
+    '285': '60% center',
+  }
+
+  const imgKey  = Object.keys(imgList)
+  const rand    = Math.floor(Math.random() * imgKey.length)
+  const imgId   = imgKey[rand]
+  const bg      = `../image/${imgId}.jpg`
+  const pos     = imgList[imgId]
+  document.body.style.backgroundImage    = `url(${bg})`
+  document.body.style.backgroundPosition = pos
+
+  // force shift article to top
+  if (imgId === '285') {
+    document.body.classList.add('article-top')
+  } else {
+    document.body.classList.add('article-bottom')
+  }
+}
