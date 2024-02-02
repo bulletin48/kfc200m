@@ -9,9 +9,9 @@ Countdown The BNK48's most notable song to 200 Million Views on YouTube
 ## Roadmap
 
 - ~~View counts to update more frequently in later version.~~
-- Randomized background as snapshot from MV.
-- Update automatically over resource from Firebase.
 - Build Page with React.
+- Update automatically over resource from Firebase.
+- Randomized background as snapshot from MV.
 - Use WebSocket to update automatically when number changes.
 - Track over multi-video.
 

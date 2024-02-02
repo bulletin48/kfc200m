@@ -71,7 +71,7 @@ get(options, (res) => {
         if (err) {
           console.error('Error: ', err)
         } else {
-          console.log(`File ${currentFile} saved.`)
+          console.log(`Current view count updated.`)
         }
       })
       // write single line to history.csv
@@ -79,7 +79,7 @@ get(options, (res) => {
         if (err) {
           console.error('Error: ', err)
         } else {
-          console.log(`File ${historyFile} saved.`)
+          console.log(`History updated.`)
         }
       })
     } catch (e) {
